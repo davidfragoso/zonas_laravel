@@ -1,0 +1,194 @@
+/* Estilos para el Carrusel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Estilos para Botones */
+.btn:hover {
+    background-color: #007bff; /* Ajusta este color según tu esquema de color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos para la Barra de Navegación */
+.navbar-nav .nav-link {
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    color: #007bff; /* Ajusta este color según tu esquema de color */
+}
+
+/* Animaciones Suaves para Cargar Contenido */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .carousel, .otra-clase {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos para Tarjetas */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Estilos para el Pie de Página */
+footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #007bff;
+}
+
+/* Animaciones de Texto */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1, h2, .titulo-importante {
+    animation: popIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filtro-form {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos Personalizados para el Paginador */
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+    margin: 20px 0;
+}
+
+.page-item {
+    margin: 0 2px; /* Espaciado entre los botones de paginación */
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: #007bff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    background-color: #fff; /* Fondo de los enlaces */
+    border: 1px solid #dee2e6; /* Borde de los enlaces */
+    padding: 0.5rem 0.75rem; /* Padding de los enlaces */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; /* Transición suave */
+}
+
+.page-link:hover {
+    color: #0056b3; /* Color de texto al pasar el cursor */
+    background-color: #e9ecef; /* Fondo al pasar el cursor */
+    border-color: #dee2e6; /* Borde al pasar el cursor */
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff; /* Color de texto para el ítem activo */
+    background-color: #007bff; /* Fondo para el ítem activo */
+    border-color: #007bff; /* Borde para el ítem activo */
+}
+
+.page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra para el foco */
+}
+
+/* Reducir el tamaño de los iconos de navegación del paginador */
+.pagination .carousel-control-prev-icon,
+.pagination .carousel-control-next-icon {
+    width: 20px; /* Ajusta el ancho del icono */
+    height: 20px; /* Ajusta la altura del icono */
+    background-size: 20px; /* Asegúrate de que el tamaño de fondo coincida con las nuevas dimensiones */
+}
+
+/* Ajustar el tamaño y la alineación del botón que contiene los iconos */
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Otros estilos del .page-link */
+}
+/* Estilos Personalizados para los Íconos del Paginador */
+.pagination .page-link svg {
+    width: 1rem; /* Ajusta el ancho del ícono */
+    height: 1rem; /* Ajusta la altura del ícono */
+}
+#loader {
+    margin: 20px 0;
+}
+
+.spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3); /* Color del borde */
+    border-top: 5px solid #555; /* Color del borde superior */
+    border-radius: 50%;
+    width: 50px; /* Tamaño del Spinner */
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
